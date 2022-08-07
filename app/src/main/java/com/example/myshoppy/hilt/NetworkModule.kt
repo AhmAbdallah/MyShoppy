@@ -16,11 +16,13 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
+    private const val baseURL = "https://fakestoreapi.com/"
+
     @Provides
     @Singleton
     fun providesRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://fakestoreapi.com/")
+            .baseUrl(baseURL)
             .client(okHttpClient)
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
