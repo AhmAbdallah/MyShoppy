@@ -64,5 +64,20 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp")
     implementation("com.squareup.okhttp3:logging-interceptor")
 
+    //Coil-> Image Loading
+    implementation "io.coil-kt:coil:2.1.0"
+
+    // Epoxy (RecyclerView)
+    def epoxy_version = "4.6.3"
+    implementation "com.airbnb.android:epoxy:$epoxy_version"
+
+    // Facebook shimmer (loading state)
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    // Jetpack Navigation
+    def nav_version = "2.5.0"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
 
 }
